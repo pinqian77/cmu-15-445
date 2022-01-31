@@ -112,11 +112,11 @@ class RowMatrix : public Matrix<T> {
    * @param rows The number of rows
    * @param cols The number of columns
    */
-  RowMatrix(int rows, int cols) : Matrix<T>(rows, cols), data_(new T *[this->rows_ * this->cols_]) {
+  RowMatrix(int rows, int cols) : Matrix<T>(rows, cols), data_(new T *[this->rows_]) {
     for (int row = 0; row < this->rows_; row++) {
       data_[row] = &this->linear_[row * this->cols_];
     }
-  }
+  }¡¢
 
   /**
    * TODO(P0): Add implementation
